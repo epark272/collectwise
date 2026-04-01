@@ -49,10 +49,18 @@ When deploying into production, you may use your favorite hosting service with t
 npm run start
 ```
 
-For a live example, I have used Render. The base URL for any API calls is 
+For a live example, I have used Render. The base URL for any API calls is:
 ```
 https://collectwise-85vy.onrender.com/
 ```
+For an example account, you may visit
+```
+https://collectwise-85vy.onrender.com/accounts/ACC100001
+```
+in your browser, or execute
+```
+curl https://collectwise-85vy.onrender.com/accounts/ACC100001
+``` in your terminal.
 
 ## 3. Email to Atlas Recovery COO
 You can find this email in [`COO_email.txt`](COO_email.txt).
