@@ -60,7 +60,8 @@ https://collectwise-85vy.onrender.com/accounts/ACC100001
 in your browser, or execute
 ```
 curl https://collectwise-85vy.onrender.com/accounts/ACC100001
-``` in your terminal.
+```
+in your terminal.
 
 ## 3. Email to Atlas Recovery COO
 You can find this email in [`COO_email.txt`](COO_email.txt).
