@@ -1,0 +1,16 @@
+{
+  "name": "collectwise",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "epark272",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "ingest": "node ingest.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.8.0"
+  }
+}

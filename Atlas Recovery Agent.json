@@ -1,0 +1,327 @@
+{
+  "agent_id": "",
+  "channel": "voice",
+  "last_modification_timestamp": 1775080867884,
+  "agent_name": "Atlas Recovery Agent",
+  "response_engine": {
+    "type": "conversation-flow",
+    "version": 0,
+    "conversation_flow_id": "conversation_flow_23419c929e1f"
+  },
+  "language": "en-US",
+  "data_storage_setting": "everything",
+  "opt_in_signed_url": false,
+  "version": 0,
+  "is_published": false,
+  "post_call_analysis_model": "gpt-4.1-mini",
+  "pii_config": {
+    "mode": "post_call",
+    "categories": []
+  },
+  "handbook_config": {
+    "default_personality": true,
+    "ai_disclosure": true
+  },
+  "voice_id": "retell-Cimo",
+  "max_call_duration_ms": 3600000,
+  "interruption_sensitivity": 0.9,
+  "allow_user_dtmf": true,
+  "user_dtmf_options": {},
+  "conversationFlow": {
+    "conversation_flow_id": "conversation_flow_23419c929e1f",
+    "version": 0,
+    "nodes": [
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775081013269",
+            "id": "edge-1775080948537-h8whz3wip",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Caller confirms they are John Doe or not John Doe"
+            }
+          }
+        ],
+        "id": "node-1775080948537",
+        "type": "conversation",
+        "display_position": {
+          "x": 318,
+          "y": 270
+        },
+        "instruction": {
+          "type": "static_text",
+          "text": "Hello, this is Nancy from Alpha Bank. Is this John Doe? "
+        }
+      },
+      {
+        "name": "Logic Split",
+        "edges": [
+          {
+            "destination_node_id": "node-1775081285921",
+            "id": "edge-1775081056167-l9k7nuf3z",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Caller states that they are John Doe"
+            }
+          }
+        ],
+        "id": "node-1775081013269",
+        "else_edge": {
+          "destination_node_id": "node-1775081145930",
+          "id": "edge-1775081013269-hgpqcrwkm",
+          "transition_condition": {
+            "type": "prompt",
+            "prompt": "Else"
+          }
+        },
+        "type": "branch",
+        "display_position": {
+          "x": 702,
+          "y": 318
+        }
+      },
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775082284929",
+            "id": "edge-1775081145930-1mt1hyfs9",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "John Doe is not available"
+            }
+          },
+          {
+            "destination_node_id": "node-1775082517039",
+            "id": "edge-1775081217154-hgz202dhr",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "This is the wrong person"
+            }
+          }
+        ],
+        "id": "node-1775081145930",
+        "type": "conversation",
+        "display_position": {
+          "x": 1086,
+          "y": 750
+        },
+        "instruction": {
+          "type": "static_text",
+          "text": "I'm trying to reach John Doe. May I speak with them?"
+        }
+      },
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775081337793",
+            "id": "edge-1775081285921-qxwhhtk0h",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Caller provides the last 4 digits of their social security number"
+            }
+          }
+        ],
+        "id": "node-1775081285921",
+        "type": "conversation",
+        "display_position": {
+          "x": 1062,
+          "y": 102
+        },
+        "instruction": {
+          "type": "static_text",
+          "text": "Thanks John Doe. Can you please confirm the last 4 digits of your social security number?"
+        }
+      },
+      {
+        "name": "Logic Split",
+        "edges": [
+          {
+            "destination_node_id": "node-1775081438687",
+            "id": "edge-1775081343598-k62h7l8vv",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Caller correctly verifies the last 4 digits of their social security number as 1234"
+            }
+          }
+        ],
+        "id": "node-1775081337793",
+        "else_edge": {
+          "destination_node_id": "node-1775081619407",
+          "id": "edge-1775081337793-w02wihlxi",
+          "transition_condition": {
+            "type": "prompt",
+            "prompt": "Else"
+          }
+        },
+        "type": "branch",
+        "display_position": {
+          "x": 1446,
+          "y": 294
+        }
+      },
+      {
+        "custom_sip_headers": {},
+        "transfer_destination": {
+          "type": "predefined",
+          "number": "+18563630633"
+        },
+        "edge": {
+          "id": "edge-1775081408885-9jm70umcp",
+          "transition_condition": {
+            "type": "prompt",
+            "prompt": "Transfer failed"
+          }
+        },
+        "name": "Transfer Call",
+        "ignore_e164_validation": false,
+        "id": "node-1775081408885",
+        "transfer_option": {
+          "type": "cold_transfer",
+          "show_transferee_as_caller": false,
+          "enable_bridge_audio_cue": true
+        },
+        "type": "transfer_call",
+        "speak_during_execution": false,
+        "display_position": {
+          "x": 2334,
+          "y": 462
+        }
+      },
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775082517039",
+            "id": "edge-1775083044081-pf6yji8yo",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Once you have agreed to a settlement, restate the terms of the agreement (do not ask them about it again)."
+            }
+          }
+        ],
+        "id": "node-1775081438687",
+        "type": "conversation",
+        "display_position": {
+          "x": 1950,
+          "y": -234
+        },
+        "instruction": {
+          "type": "prompt",
+          "text": "Tell them the amount that they owe and try to get them to pay the full amount. If the consumer is unable to afford the full amount, offer them a 3 month payment plan. If they don't accept the 3 month payment plan offer, then you can continue to negotiate with them. You are welcome to customize the negotiation part as much as you'd like (just don't exceed a 24 month payment plan length or go below a settlement plan of 80%)."
+        }
+      },
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775081408885",
+            "id": "edge-1775081619407-kd38340zg",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Describe the transition condition"
+            }
+          }
+        ],
+        "id": "node-1775081619407",
+        "type": "conversation",
+        "display_position": {
+          "x": 1950,
+          "y": 342
+        },
+        "instruction": {
+          "type": "static_text",
+          "text": "Sorry, we were unable to verify your identity. Please hold while we transfer the call to a live agent."
+        }
+      },
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775082361117",
+            "id": "edge-1775082284929-v3sgl7jmm",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "Yes they are able to take a message"
+            }
+          },
+          {
+            "destination_node_id": "node-1775082517039",
+            "id": "edge-1775082331872-7uhad8k4l",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "No they can't take a message"
+            }
+          }
+        ],
+        "id": "node-1775082284929",
+        "type": "conversation",
+        "display_position": {
+          "x": 1446,
+          "y": 606
+        },
+        "instruction": {
+          "type": "prompt",
+          "text": "Are you able to take a message for John Doe?"
+        }
+      },
+      {
+        "name": "Conversation",
+        "edges": [
+          {
+            "destination_node_id": "node-1775082517039",
+            "id": "edge-1775082361117-hukypm85t",
+            "transition_condition": {
+              "type": "prompt",
+              "prompt": "The conversation has finished and you have thanked the caller for their time."
+            }
+          }
+        ],
+        "id": "node-1775082361117",
+        "type": "conversation",
+        "display_position": {
+          "x": 2406,
+          "y": 702
+        },
+        "instruction": {
+          "type": "prompt",
+          "text": "Please tell John Doe that Alpha Bank has been wanting to contact him regarding a debt settlement. Provide contact details that he can call back at. Finally, thank the caller for taking the message."
+        }
+      },
+      {
+        "name": "End Call",
+        "id": "node-1775082517039",
+        "type": "end",
+        "speak_during_execution": true,
+        "display_position": {
+          "x": 2934,
+          "y": 318
+        },
+        "instruction": {
+          "type": "prompt",
+          "text": "Politely end the call"
+        }
+      }
+    ],
+    "start_node_id": "node-1775080948537",
+    "start_speaker": "agent",
+    "model_choice": {
+      "type": "cascading",
+      "model": "gpt-4.1"
+    },
+    "tool_call_strict_mode": true,
+    "knowledge_base_ids": [],
+    "kb_config": {
+      "top_k": 3,
+      "filter_score": 0.6
+    },
+    "begin_tag_display_position": {
+      "x": 122,
+      "y": 333
+    },
+    "is_published": false,
+    "is_transfer_cf": false
+  }
+}

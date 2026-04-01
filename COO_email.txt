@@ -1,0 +1,22 @@
+Hello [Atlas Recovery COO],
+
+I'm pleased to let you know that we've recently updated our service to allow lookup by account number. This will be much easier for your team to work with, rather than phone numbers.
+
+The lookup works by performing a search across our entire database according to the data that you provide via CSV upload. 
+
+You can access 
+
+As per usual, please make sure that the uploaded CSVs maintain the existing requirements. I've listed them all out here, for your convenience:
+
+1. The CSV must have at least 6 columns: account_number, debtor_name, phone_number, balance, status, client_name
+2. Each row in the CSV must have an entry for these 6 columns
+3. The CSV must not have duplicate account_numbers
+4. The 'balance' column must be a numerical value and free of symbols (e.g. $ is not allowed)
+5. The 'status' column must be either "Active" or "Closed"
+
+If you upload another CSV that has a row with the same account number in the database, that account number's information will be updated. That way, you can continue to update your spreadsheet and easily sync it with our system.
+
+Let me know if you have any questions!
+
+Best regards,
+Eddie Park

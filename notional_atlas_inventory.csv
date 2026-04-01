@@ -1,0 +1,26 @@
+account_number,debtor_name,phone_number,balance,status,client_name
+ACC100001,Olivia Grant,567-0101,1245.50,Active,Northbridge Financial
+ACC100002,Marcus Lee,555-0102,0.00,Closed,Northbridge Financial
+ACC100003,Priya Nair,555-0103,875.20,Active,ClearPath Credit
+ACC100004,Daniel Ortiz,555-0104,3420.00,Active,ClearPath Credit
+ACC100005,Sophia Bennett,555-0105,95.75,Closed,BlueHarbor Lending
+ACC100006,Ethan Walker,555-0106,660.10,Active,BlueHarbor Lending
+ACC100007,Ava Mitchell,555-0107,5025.33,Active,Ridgeview Capital
+ACC100008,Noah Patel,555-0108,0.00,Closed,Ridgeview Capital
+ACC100009,Isabella Chen,555-0109,1180.90,Active,Suncrest Collections
+ACC100010,Liam Foster,555-0110,275.00,Active,Suncrest Collections
+ACC100011,Amelia Brooks,555-0111,7400.45,Active,Northbridge Financial
+ACC100012,James Rivera,555-0112,50.00,Closed,Northbridge Financial
+ACC100013,Mia Collins,555-0113,2199.99,Active,ClearPath Credit
+ACC100014,Benjamin Ward,555-0114,132.40,Active,ClearPath Credit
+ACC100015,Charlotte Hughes,555-0115,0.00,Closed,BlueHarbor Lending
+ACC100016,Henry Flores,555-0116,1845.60,Active,BlueHarbor Lending
+ACC100017,Evelyn Price,555-0117,990.00,Active,Ridgeview Capital
+ACC100018,Lucas Kim,555-0118,310.25,Closed,Ridgeview Capital
+ACC100019,Harper Reed,555-0119,4575.80,Active,Suncrest Collections
+ACC100020,Alexander Ross,555-0120,15.00,Active,Suncrest Collections
+ACC100021,Ella Morgan,555-0121,267.19,Closed,Northbridge Financial
+ACC100022,Michael Gray,555-0122,1299.30,Active,Northbridge Financial
+ACC100023,Scarlett James,555-0123,820.00,Active,ClearPath Credit
+ACC100024,Samuel Diaz,555-0124,0.00,Closed,ClearPath Credit
+ACC100025,Grace Perry,555-0125,3890.55,Active,BlueHarbor Lending
