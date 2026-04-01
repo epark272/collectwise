@@ -2,9 +2,9 @@ Hello [Atlas Recovery COO],
 
 I'm pleased to let you know that we've recently updated our service to allow lookup by account number. This will be much easier for your team to work with, rather than phone numbers.
 
-The lookup works by performing a search across our entire database according to the data that you provide via CSV upload. 
+The lookup works by performing a search across our entire database according to the data that you provide via CSV upload. Your AI agents will then be able to read that data to power your own platform.
 
-You can access 
+We've set up a notional version of the API service that your AI agents will be able to interact with at https://collectwise-85vy.onrender.com/accounts/ACC100001. Feel free to play around with inputting different account numbers! You and your team can find full documentation at https://github.com/epark272/collectwise.
 
 As per usual, please make sure that the uploaded CSVs maintain the existing requirements. I've listed them all out here, for your convenience:
 
@@ -16,7 +16,7 @@ As per usual, please make sure that the uploaded CSVs maintain the existing requ
 
 If you upload another CSV that has a row with the same account number in the database, that account number's information will be updated. That way, you can continue to update your spreadsheet and easily sync it with our system.
 
-Let me know if you have any questions!
+Please let me know if you have any questions!
 
 Best regards,
 Eddie Park
